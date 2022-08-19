@@ -29,6 +29,19 @@ align-items: center;
     color: var(--white);
     cursor: pointer;
 }
+@media(max-width: 768px) {
+    .img{
+        width: 7%;
+    }
+}
+@media(max-width: 425px) {
+    .img{
+        width: 15%;
+        h1{
+            display: none;
+        }
+    }
+}
 `
 
 export const MenuContainer = styled.div`
@@ -96,6 +109,12 @@ export const MenuContainer = styled.div`
         font-size: 2rem;
         margin-bottom: 2rem;
         text-align: start;
+    }
+  }
+  @media(max-width: 425px) {
+    .close-btn{
+        top: 2rem;
+        right: 1.5rem;
     }
   }
 `
