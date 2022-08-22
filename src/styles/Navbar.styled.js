@@ -51,6 +51,7 @@ export const MenuContainer = styled.div`
     height: 100%;
     top: 0;
     left: 0;
+    z-index: 100;
     background-color: rgba(0, 0, 0, 0.9);
     overflow-x: hidden;
     transition: 0.5s;
@@ -109,6 +110,9 @@ export const MenuContainer = styled.div`
         font-size: 2rem;
         margin-bottom: 2rem;
         text-align: start;
+        :hover{
+          color: var(--blue)
+        }
     }
   }
   @media(max-width: 425px) {

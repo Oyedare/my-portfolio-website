@@ -8,31 +8,29 @@ const Navbar = () => {
   const [isClicked,setIsClicked] = useState(false)
   return (
     <>
-        {!isClicked ? (
-          <StyledNav>
-            <div className="img">
-              <img src={avatar} alt="" />
-              <h1>Temiloluwa</h1>
-            </div>
-            <div className="menu" onClick={()=>setIsClicked(!isClicked)}>
-              <CgMenuHotdog size={40}/>
-            </div>
-          </StyledNav>
-        ):(
-          <MenuContainer>
-            <div className="close-btn" onClick={()=>setIsClicked(!isClicked)}>
-              <CgClose size={50}/>
-            </div>
-            <div className="menu-content">
-              <a href="/">Home</a>
-              <a href="/">About</a>
-              <a href="/">Skills</a>
-              <a href="/">Projects</a>
-              <a href="/">Contact</a>
-            </div>
-          </MenuContainer>
-        )}
-      
+      <StyledNav>
+        <div className="img">
+          <img src={avatar} alt="" />
+          <h1>Temiloluwa</h1>
+        </div>
+        <div className="menu" onClick={()=>setIsClicked(!isClicked)}>
+          <CgMenuHotdog size={40}/>
+        </div>
+      </StyledNav>
+      {isClicked && (
+        <MenuContainer>
+          <div className="close-btn" onClick={()=>setIsClicked(!isClicked)}>
+            <CgClose size={50}/>
+          </div>
+          <div className="menu-content">
+            <a href="/">Home</a>
+            <a href="/">About</a>
+            <a href="/">Skills</a>
+            <a href="/">Projects</a>
+            <a href="/">Contact</a>
+          </div>
+        </MenuContainer>
+      )}
     </>
   )
 }
