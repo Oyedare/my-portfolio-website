@@ -42,7 +42,7 @@ input{
   margin: 0 auto;
   position: relative;
   padding: 2rem 7.5rem;
-  @media(max-width: 768px) {
+  @media(max-width: 1024px) {
     padding: 1.5rem 3rem;
   }
 }

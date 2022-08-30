@@ -4,8 +4,8 @@ import { StyledHeader } from '../styles/Header.styled'
 export const Header = () => {
   return (
     <StyledHeader>
-        <p>Hello! I'm</p>
-        <h1>Temiloluwa</h1>
+        <p>I'm from Nigeria</p>
+        <h1>A Frontend Developer</h1>
     </StyledHeader>
   )
 }
