@@ -2,17 +2,6 @@ import React from 'react'
 import { SContact } from '../styles/Contact.styled'
 import {AiFillTwitterCircle,AiFillGithub,AiFillLinkedin} from 'react-icons/ai'
 export const Contact = () => {
-  const logos = [
-    {
-      logo: AiFillTwitterCircle,
-    },
-    {
-      logo: AiFillGithub,
-    },
-    {
-      logo: AiFillLinkedin,
-    }
-  ]
   return (
     <SContact>
       <div className="top">
