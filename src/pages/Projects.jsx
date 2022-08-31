@@ -11,7 +11,7 @@ export const Projects = () => {
       img: manage,
       type: "website",
       title: "manage landing page",
-      desc: "Cooky is a food recipe app that wires to a public provided API to give users ingredients to their favorite recipes",
+      desc: "Manage is a practice challenge i took up from frontend mentor",
       stack: ["Next.js","Styled-Components"],
       links: [
         {
@@ -28,7 +28,7 @@ export const Projects = () => {
       stack: ["React","Styled-Components"],
       links: [
         {
-          live: "https://cooky-app.netlify.app/recipes",
+          live: "https://cooky-app.netlify.app/",
           github: "https://github.com/Oyedare/Cooky-Recipe-app-"
         }
       ]
@@ -37,7 +37,7 @@ export const Projects = () => {
       img: tech,
       type: "website",
       title: "Rhematech",
-      desc: "Cooky is a food recipe app that wires to a public provided API to give users ingredients to their favorite recipes",
+      desc: "A landing page built for a world class infrastrure institution following their ground breaking record.",
       stack: ["HTML","Css","JavaScript"],
       links: [
         {
@@ -50,7 +50,7 @@ export const Projects = () => {
       img: countdown,
       type: "web app",
       title: "Countdown App",
-      desc: "Cooky is a food recipe app that wires to a public provided API to give users ingredients to their favorite recipes",
+      desc: "A web app counting down to a big business open day",
       stack: ["HTML","CSS","JS"],
       links: [
         {
@@ -63,8 +63,8 @@ export const Projects = () => {
       img: rand,
       type: "web app",
       title: "random advice generator",
-      desc: "Cooky is a food recipe app that wires to a public provided API to give users ingredients to their favorite recipes",
-      stack: ["React","Styled-Components"],
+      desc: "Ever got confused or perplexed? An advice app to give you random advices",
+      stack: ["React","CSS"],
       links: [
         {
           live: "https://random-advice-webapp.netlify.app/",
