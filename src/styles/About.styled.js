@@ -24,9 +24,9 @@ export const StyledAbout = styled.div`
         .text{
             width: 50%;
             p{
-                padding-block-start: 2rem;
+                padding-block-start: 1rem;
                 line-height: 1.8;
-                font-size: 1.2rem;
+                font-size: 1rem;
                 color: var(--white);
             }
         }

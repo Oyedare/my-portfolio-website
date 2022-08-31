@@ -24,10 +24,10 @@ const Navbar = () => {
           </div>
           <div className="menu-content">
             <a href="/">Home</a>
-            <a href="/">About</a>
-            <a href="/">Skills</a>
-            <a href="/">Projects</a>
-            <a href="/">Contact</a>
+            <a href="/about">About</a>
+            <a href="/skills">Skills</a>
+            <a href="/projects">Projects</a>
+            <a href="/contact">Contact</a>
           </div>
         </MenuContainer>
       )}
