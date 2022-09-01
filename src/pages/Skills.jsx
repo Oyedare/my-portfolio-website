@@ -47,7 +47,7 @@ export const Skills = () => {
         
     ]
   return (
-    <StyledSkill>
+    <StyledSkill id="#skills">
         <h2>Skills</h2>
         <div className="text">
             <p className='skill-summary'>As a frontend developer i've learnt and worked with the technologies a frontend developer utilizes, i'm currently learning TypeScript but here are the ones i work with:</p>

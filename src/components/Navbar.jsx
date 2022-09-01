@@ -23,11 +23,11 @@ const Navbar = () => {
             <CgClose size={50}/>
           </div>
           <div className="menu-content">
-            <a href="/">Home</a>
-            <a href="/about">About</a>
-            <a href="/skills">Skills</a>
-            <a href="/projects">Projects</a>
-            <a href="/contact">Contact</a>
+            <a href="/" onClick={()=>setIsClicked(!isClicked)}>Home</a>
+            <a href="#about" onClick={()=>setIsClicked(!isClicked)}>About</a>
+            <a href="#skills" onClick={()=>setIsClicked(!isClicked)}>Skills</a>
+            <a href="#projects" onClick={()=>setIsClicked(!isClicked)}>Projects</a>
+            <a href="#contact" onClick={()=>setIsClicked(!isClicked)}>Contact</a>
           </div>
         </MenuContainer>
       )}

@@ -3,7 +3,7 @@ import { StyledAbout } from '../styles/About.styled'
 import profile from '../assets/profile.jpg'
 export const About = () => {
   return (
-    <StyledAbout>
+    <StyledAbout id='about'>
       <h2>About</h2>
       <div className="profile">
 

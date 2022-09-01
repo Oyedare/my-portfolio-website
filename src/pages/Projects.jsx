@@ -74,7 +74,7 @@ export const Projects = () => {
     }
   ]
   return (
-    <StyledProject>
+    <StyledProject id='#projects'>
       <h2>Projects</h2>
       <div className='projects'>
         {projects.map(({img,type,title,desc,stack,links})=>(

@@ -22,4 +22,14 @@ margin-top: 2rem;
         font-size: 2rem;
     }
  }
+ @media(max-width: 375px) {
+    .bottom{
+        h3{
+            font-size: 1.5rem;
+        }
+        p{
+            font-size: 1rem;
+        }
+    }  
+ }
 `
