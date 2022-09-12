@@ -45,5 +45,9 @@ input{
   @media(max-width: 1024px) {
     padding: 1.5rem 3rem;
   }
+  @media(max-width: 425px) {
+    padding: 1.5rem 2rem;
+  }
 }
+
 `

@@ -15,6 +15,7 @@ export const StyledAbout = styled.div`
     .profile{
         display: flex;
         justify-content: space-between;
+        position: relative;
         .profile-img{
             width: 40%;
             img{

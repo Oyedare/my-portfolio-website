@@ -1,12 +1,37 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { StyledAbout } from '../styles/About.styled'
 import profile from '../assets/profile.jpg'
+import {motion} from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
+import { useAnimation } from 'framer-motion'
+// import pattern1 from '../assets/pattern1.svg'
 export const About = () => {
-  return (
-    <StyledAbout id='about'>
-      <h2>About</h2>
-      <div className="profile">
 
+  const [ref,inView] = useInView({
+    threshold: 0.2
+  })
+  const animation = useAnimation()
+
+  useEffect(()=>{
+    if(inView){
+      animation.start({
+        x: 0,
+        transition: {
+          type: 'spring',duration: 1.5, bounce: 0.3
+        }
+      })
+    }
+    if(!inView){
+      animation.start({
+        x: '-100vw'
+      })
+    }
+  })
+
+  return (
+    <StyledAbout id='about' className='container' ref={ref}>
+      <motion.h2 animate={animation}>About</motion.h2>
+      <motion.div className="profile" animate={animation}>
         <div className="profile-img">
           <img src={profile} alt="" />
         </div>
@@ -18,9 +43,7 @@ export const About = () => {
           <p>I tend to be a stickler most of the times and can spend hours typing away on the keyboard till I get the results I desire (it's very stressful sometimes 😩).</p>
           <p>If you don't find me  glued to my laptop screen spoiling my  eyesight from radiation, then I'm probably watching a Manchester United Match. 🤧❤️ </p>
         </div>
-       
-
-      </div>
+      </motion.div>
       
     </StyledAbout>
   )

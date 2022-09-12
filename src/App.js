@@ -7,14 +7,14 @@ import { Projects } from './pages/Projects';
 import { Skills } from './pages/Skills';
 function App() {
   return (
-    <div className='container'>
+    <>
       <Navbar />
       <Header />
       <About />
       <Skills />
       <Projects />
       <Contact />
-    </div>
+    </>
   );
 }
 

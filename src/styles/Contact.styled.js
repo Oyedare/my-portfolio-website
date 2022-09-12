@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const SContact = styled.div`
-margin-top: 2rem;
+/* margin-top: 2rem; */
  .top{
     display: flex;
     justify-content: center;
@@ -22,7 +22,7 @@ margin-top: 2rem;
         font-size: 2rem;
     }
  }
- @media(max-width: 375px) {
+ @media(max-width: 425px) {
     .bottom{
         h3{
             font-size: 1.5rem;

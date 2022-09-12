@@ -1,17 +1,34 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { StyledProject } from '../styles/Projects.styled'
 import cooky from '../assets/cooky.png'
-import countdown from '../assets/Countdown.png'
+import calend from '../assets/Calendee1.png'
 import manage from '../assets/manage.png'
 import rand from '../assets/rand.png'
 import tech from '../assets/Rhematech.png'
+import { motion } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
+import { useAnimation } from 'framer-motion'
+
 export const Projects = () => {
   const projects = [
+    {
+      img: calend,
+      type: "web app",
+      title: "Calendee",
+      desc: "Calendee is a scheduling platform that aids in setting appointments at different time ranges. It accepts authentication of users and also allows them create recurring appointments.",
+      stack: ["React","CSS","Tailwind","Firebase","Sync-Fusion","Framer Motion"],
+      links: [
+        {
+          live: "https://calendee.netlify.app/",
+          github: "https://github.com/Oyedare/Calendee"
+        }
+      ]
+    },
     {
       img: manage,
       type: "website",
       title: "manage landing page",
-      desc: "Manage is a practice challenge i took up from frontend mentor",
+      desc: "",
       stack: ["Next.js","Styled-Components"],
       links: [
         {
@@ -24,8 +41,8 @@ export const Projects = () => {
       img: cooky,
       type: "web app",
       title: "Cooky",
-      desc: "Cooky is a food recipe app that wires to a public provided API to give users ingredients to their favorite recipes",
-      stack: ["React","Styled-Components"],
+      desc: "Cooky is a food recipe app that wires to a public provided API to give users ingredients to their favorite dish",
+      stack: ["React","Styled-Components","API"],
       links: [
         {
           live: "https://cooky-app.netlify.app/",
@@ -34,10 +51,24 @@ export const Projects = () => {
       ]
     },
     {
+      img: rand,
+      type: "web app",
+      title: "random advice generator",
+      desc: "Random Advice Generator lists out random advices for whenever you feel anxious.",
+      des2: "It was built for fun and was an avenue to learn how to fetch from APIs",
+      stack: ["React","CSS","API"],
+      links: [
+        {
+          live: "https://random-advice-webapp.netlify.app/",
+          github: "https://github.com/Oyedare/random-advice-generator"
+        }
+      ]
+    },
+    {
       img: tech,
       type: "website",
       title: "Rhematech",
-      desc: "A landing page built for a world class infrastrure institution following their ground breaking record.",
+      desc: "",
       stack: ["HTML","Css","JavaScript"],
       links: [
         {
@@ -46,60 +77,65 @@ export const Projects = () => {
         }
       ]
     },
-    {
-      img: countdown,
-      type: "web app",
-      title: "Countdown App",
-      desc: "A web app counting down to a big business open day",
-      stack: ["HTML","CSS","JS"],
-      links: [
-        {
-          live: "https://countdown-app-mu.vercel.app/",
-          github: "https://github.com/Oyedare/countdown-app"
-        }
-      ]
-    },
-    {
-      img: rand,
-      type: "web app",
-      title: "random advice generator",
-      desc: "Ever got confused or perplexed? An advice app to give you random advices",
-      stack: ["React","CSS"],
-      links: [
-        {
-          live: "https://random-advice-webapp.netlify.app/",
-          github: "https://github.com/Oyedare/random-advice-generator"
-        }
-      ]
-    }
   ]
+
+  const [ref,inView] = useInView({
+    // threshold: '0.2'
+  })
+  const animate = useAnimation()
+  const animation = useAnimation()
+  useEffect(() =>{
+    if(inView){
+      animate.start({
+        x: 0,
+        transition: {
+          type: 'spring',duration: 1.5, bounce: 0.3
+        }
+      })
+      animation.start({
+        x: 0,
+        transition: {
+          type: 'spring',duration: 1.5, bounce: 0.3
+        }
+      })
+    }
+    if(!inView){
+      animate.start({
+        x: '-100vw'
+      })
+      animation.start({
+        x: '100vw'
+      })
+    }
+  })
   return (
-    <StyledProject id='#projects'>
+    <StyledProject id='#projects' className='container'>
       <h2>Projects</h2>
-      <div className='projects'>
-        {projects.map(({img,type,title,desc,stack,links})=>(
-          <div className="project">
-            <div className="project-img">
+      <div className='projects' ref={ref}>
+        {projects.map(({img,type,title,desc,stack,links,des2})=>(
+          <div className="project" key={title}>
+            <motion.div className="project-img" animate={animation}>
               <img src={img} alt="" />
-            </div>
-            <div className="project-text">
+            </motion.div>
+            <motion.div className="project-text" animate={animate}>
               <h4>{type}</h4>
               <h3>{title}</h3>
               <p>{desc}</p>
+              <p>{des2}</p>
               <div className="stack">
                 {stack.map(item => 
-                  <h5>
+                  <h5 key={item}>
                     {item}
                   </h5>
                 )}
               </div>
                   {links.map(({live,github})=>(
-                    <div className="links">
+                    <div className="links" key={live}>
                       <p><a href={live}>Live</a></p>
                       <p><a href={github}>Github</a></p>
                     </div> 
                   ))}  
-            </div>
+            </motion.div>
           </div>
         ))}
       </div>

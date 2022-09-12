@@ -1,64 +1,87 @@
 import React from 'react'
 import { StyledSkill } from '../styles/Skills.styled'
+import { motion } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
+import { useAnimation } from 'framer-motion'
+import { useEffect } from 'react'
 
 export const Skills = () => {
     const skills = [
         {
             skill: "HTML",
-            id: 1
+            id: 12
         },
         {
             skill: "CSS",
-            id: 1
+            id:13
         },
         {
             skill: "SCSS",
-            id: 1
+            id: 14
         },
         {
             skill: "Styled-Components",
-            id: 1
+            id: 15
         },
         {
             skill: "Tailwind",
-            id: 1
+            id: 16
         },
         {
             skill: "JavaScript",
-            id: 1
+            id: 17
         },
         {
             skill: "React",
-            id: 1
+            id: 18
         },
         {
             skill: "Next.js",
-            id: 1
+            id: 19
         },
         {
             skill: "Git",
-            id: 1
+            id: 100
         },
         {
             skill: "Github",
-            id: 1
+            id: 187
         },
        
         
     ]
+    const [ref,inView] = useInView({
+        threshold: 0.3
+    })
+    const animate = useAnimation()
+    useEffect(()=>{
+        if(inView){
+            animate.start({
+                opacity: 1,
+                transition: {
+                  staggerChildren: 0.5
+                }
+            })
+        }
+        if(!inView){
+            animate.start({
+                opacity: 0
+            })
+        }
+    })
   return (
-    <StyledSkill id="#skills">
-        <h2>Skills</h2>
-        <div className="text">
-            <p className='skill-summary'>As a frontend developer i've learnt and worked with the technologies a frontend developer utilizes, i'm currently learning TypeScript but here are the ones i work with:</p>
-            <div className="skills">
+    <StyledSkill id="#skills" className='container' ref={ref}>
+        <motion.h2 animate={animate}>Skills</motion.h2>
+        <motion.div className="text" animate={animate}>
+            <motion.p className='skill-summary' animate={animate}>As a frontend developer i've learnt and worked with the technologies a frontend developer utilizes, i'm currently learning TypeScript but here are the ones i work with:</motion.p>
+            <motion.div className="skills" animate={animate}>
                 {skills.map(({skill,id})=>(
-                    <div className='skill' key={id}>
+                    <motion.div className='skill' key={id} animate={animate}>
                         {skill}
-                    </div>
+                    </motion.div>
                 ))}
-            </div>
-        </div>
+            </motion.div>
+        </motion.div>
     </StyledSkill>
   )
 }

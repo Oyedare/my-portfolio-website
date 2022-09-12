@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 export const StyledSkill = styled.div`
-    margin-top: 4rem;
+    margin-top: 12rem;
+    margin-bottom: 12rem;
     h2{
         display: flex;
         align-items: center;
@@ -23,13 +24,18 @@ export const StyledSkill = styled.div`
         }
         .skills{
             max-width: 100%;
-            display: grid; 
+            display: flex;
+            align-items: center;
+            text-align: center;
+            gap: 2rem 10rem;
+            flex-wrap: wrap;
+            /* display: grid; 
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
             grid-template-rows: 1fr 1fr; 
             gap: 55% 2%; 
             grid-template-areas: 
                 ". . . . ."
-                ". . . . ."; 
+                ". . . . .";  */
             .skill{
                 /* background-color: var(--blue); */
                 /* display: flex;
@@ -46,7 +52,7 @@ export const StyledSkill = styled.div`
         }
         .text{
             .skills{
-                gap: 25% 5%;
+                gap: 2rem 6rem;
             }
         }
     }
@@ -67,9 +73,10 @@ export const StyledSkill = styled.div`
         }
     }
     @media(max-width: 425px) {
+        margin-bottom: 3rem;
+        margin-top: 3rem;
         h2{
             font-size: 6rem;
-            /* margin-bottom: .7rem; */
             justify-content: center;
         }
         .text{
@@ -78,11 +85,7 @@ export const StyledSkill = styled.div`
                 margin-bottom: 2rem;
             }
             .skills{ 
-                grid-template-columns: 1fr 1fr 1fr 1fr; 
-                grid-template-rows: 1fr 1fr;  
-                grid-template-areas: 
-                    ". . . ."
-                    ". . . ."; 
+               gap: 1rem 2rem;
             }
         }
     }
