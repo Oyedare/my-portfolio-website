@@ -6,7 +6,8 @@ export const GlobalStyle = createGlobalStyle`
     --white: #fff;
     --gray: #888888;
     --text: #8c8c8c;
-    --blue: #2F89FC
+    --blue: #2F89FC;
+    --fontFamily: 'Poppins', sans-serif;
 }
 *{
   padding: 0;
@@ -22,7 +23,7 @@ body{
     overflow-x: hidden;
     width: 100vw;
     color: var(--text);
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--fontFamily);
     background-color: var(--bg);
 }
 a {
