@@ -47,6 +47,7 @@ export const StyledProject = styled.div`
                     padding-block-start: 1.5rem;
                     color: var(--white);
                     font-size: 1.1rem;
+                    line-height: 1.5;
                 }
                 .stack{
                     display: flex;

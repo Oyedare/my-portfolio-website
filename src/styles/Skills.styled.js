@@ -11,7 +11,7 @@ export const StyledSkill = styled.div`
         color: rgba(255, 255, 255, 0.08);
         text-transform: uppercase;
         font-size: 9rem;
-        margin-bottom: -3rem;
+        /* margin-bottom: -3rem; */
     }
     .text{
         color: var(--white);
