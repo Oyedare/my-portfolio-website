@@ -40,7 +40,7 @@ export const StyledHeader = styled.div`
         align-items: center;
         p{
         color: rgba(255, 255, 255, 0.6);
-        font-weight: 400;
+        font-weight: 500;
         text-transform: uppercase;
         letter-spacing: 4px;
         }
@@ -48,7 +48,7 @@ export const StyledHeader = styled.div`
             font-size: 4rem;
             color: #fff;
             line-height: 1.5;
-            font-weight: 700;
+            font-weight: 800;
             text-transform: uppercase;
             letter-spacing: 10px;
             /* display: inline-block; */

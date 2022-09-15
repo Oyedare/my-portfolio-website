@@ -1,15 +1,15 @@
 import styled from 'styled-components';
 
 export const StyledProject = styled.div`
-    margin-top: 12rem;
+    /* margin-top: 12rem; */
     h2{
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        font-weight: 700;
+        font-weight: 800;
         color: rgba(255, 255, 255, 0.08);
         text-transform: uppercase;
-        font-size: 8rem;
+        font-size: 6rem;
     }
     .projects{
         margin-top: 2rem;
@@ -29,7 +29,7 @@ export const StyledProject = styled.div`
                 width: 50%;
                 h4{
                     font-size: 1rem;
-                    font-weight: 500;
+                    font-weight: 600;
                     letter-spacing: 5px;
                     color: var(--blue);
                     text-transform: capitalize;
@@ -46,7 +46,7 @@ export const StyledProject = styled.div`
                 p{
                     padding-block-start: 1.5rem;
                     color: var(--white);
-                    font-size: 1rem;
+                    font-size: 1.1rem;
                 }
                 .stack{
                     display: flex;
@@ -60,7 +60,7 @@ export const StyledProject = styled.div`
                         background-color: #8c8c8c;
                         padding: .5rem .8rem;
                         border-radius: 5px;
-                        font-weight: 400;
+                        font-weight: 500;
                         font-size: 1rem;
                     }
                 }

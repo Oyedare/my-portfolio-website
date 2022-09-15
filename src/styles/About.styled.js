@@ -6,10 +6,10 @@ export const StyledAbout = styled.div`
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        font-weight: 700;
+        font-weight: 800;
         color: rgba(255, 255, 255, 0.08);
         text-transform: uppercase;
-        font-size: 10rem;
+        font-size: 9rem;
     }
 
     .profile{

@@ -20,6 +20,11 @@ export const SContact = styled.div`
 
     h3{
         font-size: 2rem;
+        font-weight: 600;
+    }
+    p{
+        letter-spacing: 2px;
+        
     }
  }
  @media(max-width: 425px) {

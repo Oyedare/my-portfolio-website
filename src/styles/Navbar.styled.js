@@ -20,7 +20,7 @@ align-items: center;
         font-size: 20px;
         text-transform: uppercase;
         color: #fff;
-        font-weight: 400;
+        font-weight: 500;
         letter-spacing: 5px;
         padding: 7px;
         /* display: block; */

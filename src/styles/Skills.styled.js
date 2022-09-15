@@ -1,16 +1,16 @@
 import styled from 'styled-components';
 
 export const StyledSkill = styled.div`
-    margin-top: 12rem;
-    margin-bottom: 12rem;
+    margin-top: 5rem;
+    margin-bottom: 6rem;
     h2{
         display: flex;
         align-items: center;
         justify-content: start;
-        font-weight: 700;
+        font-weight: 800;
         color: rgba(255, 255, 255, 0.08);
         text-transform: uppercase;
-        font-size: 10rem;
+        font-size: 9rem;
         margin-bottom: -3rem;
     }
     .text{

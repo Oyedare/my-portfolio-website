@@ -131,8 +131,8 @@ export const Projects = () => {
               </div>
                   {links.map(({live,github})=>(
                     <div className="links" key={live}>
-                      <p><a href={live}>Live</a></p>
-                      <p><a href={github}>Github</a></p>
+                      <p><a href={live} target="_blank" rel="noreferrer">Live</a></p>
+                      <p><a href={github} target="_blank" rel="noreferrer">Github</a></p>
                     </div> 
                   ))}  
             </motion.div>
